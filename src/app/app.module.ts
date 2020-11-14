@@ -8,6 +8,7 @@ import { BeerListComponent } from './beer-list/beer-list.component';
 import { BreweryAboutComponent } from './brewery-about/brewery-about.component';
 import { CartComponent } from './cart/cart.component';
 import { BreweryBeersComponent } from './brewery-beers/brewery-beers.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BreweryBeersComponent } from './brewery-beers/brewery-beers.component';
     BeerListComponent,
     BreweryAboutComponent,
     CartComponent,
-    BreweryBeersComponent
+    BreweryBeersComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

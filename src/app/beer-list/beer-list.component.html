@@ -15,11 +15,12 @@
       <td>{{beer.name}}</td>
       <td>{{beer.type}}</td>
       <td>{{beer.price |currency}}</td>
-      <td><span class="badge badge-warning" *ngIf="beer.stock===0">Sin Stock</span></td>
       <td>
-        <button class="btn btn-primary btn-sm" (click)="downQuantity(beer)">-</button>
-        <input class="smallInput" type="number" [(ngModel)]="beer.quantity"/>
-        <button class="btn btn-primary btn-sm" (click)="upQuantity(beer)">+</button>
+        <span class="badge badge-warning" *ngIf="beer.stock==0; else elseBlock">Sin Stock</span>
+        <ng-template #elseBlock>{{beer.stock}}</ng-template></td>
+      <td>
+        <app-input-integer *ngIf="beer.stock" [(quantity)]="beer.quantity" [max]="beer.stock" (maxReached)="maxReached($event)"></app-input-integer>
+        <button class="btn btn-primary mt-2" (click)="addToCart(beer)">Al Carrito</button>
       </td>
     </tr>
   </tbody>
