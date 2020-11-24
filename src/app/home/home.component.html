@@ -1,0 +1,13 @@
+<ngb-carousel *ngIf="images" class="mt-5 mb-5" #carousel [interval]="2000" >
+  <ng-template ngbSlide *ngFor="let image of images">
+    <div class="picsum-img-wrapper">
+      <a class="nav-link" [routerLink]="['/beers']">
+        <img [src]="image" alt="Random slide">
+      </a>
+    </div>
+    <div class="carousel-caption">
+      <h3>Slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

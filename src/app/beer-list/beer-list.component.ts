@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BeerCartService } from '../beer-cart.service';
-import { Beer } from './beer';
+import { BeerCartService } from '../services/beer-cart.service';
+import { Beer } from '../modelos/Beer';
+import { BeerDataService } from '../services/beer-data.service';
 
 @Component({
   selector: 'app-beer-list',
@@ -9,38 +10,11 @@ import { Beer } from './beer';
 })
 export class BeerListComponent implements OnInit {
 
-  beers: Beer[] = [
-    {
-      name: 'Negra Fuerte',
-      type: 'Porter',
-      price: 180,
-      stock: 5,
-      image: 'assets/img/porter.jpeg',
-      clearance: false,
-      quantity: 0,
-    },
-    {
-      name: 'Red Red Wine',
-      type: 'Barley Wine',
-      price: 200,
-      stock: 3,
-      image: 'assets/img/porter.jpeg',
-      clearance: true,
-      quantity: 0,
-    },
-    {
-      name: 'Yellow Submarine',
-      type: 'Golden Ale',
-      price: 180,
-      stock: 0,
-      image: 'assets/img/porter.jpeg',
-      clearance: false,
-      quantity: 0,
-    }
-  ];
+  beers: Beer[] = [];
 
 
-  constructor(private cart: BeerCartService) {
+  constructor(private cart: BeerCartService, private beerService: BeerDataService) {
+    this.beers = beerService.getAll();
    }
 
   ngOnInit(): void {
