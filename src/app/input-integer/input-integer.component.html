@@ -2,7 +2,7 @@
   <div class="input-group-prepend">
     <button class="btn btn-primary btn-sm" (click)="downQuantity()">-</button>
   </div>
-  <input class="smallInput" class="text-center" type="text" [(ngModel)]="quantity"/>
+  <input class="smallInput" class="text-center" type="number" [(ngModel)]="quantity" (change)="checkValue(quantity)" min="0"/>
   <div class="input-group-append">
     <button class="btn btn-primary btn-sm" (click)="upQuantity()">+</button>
   </div>
