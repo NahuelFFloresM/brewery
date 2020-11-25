@@ -1,13 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
 import { Beer } from '../modelos/beer';
+
+const URL = 'https://5fbe69505923c90016e6b002.mockapi.io';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class BeerDataService {
 
-  beers: Beer[] = [
+  /*beers: Beer[] = [
     {
       name: 'Negra Fuerte',
       type: 'Porter',
@@ -35,11 +41,14 @@ export class BeerDataService {
       clearance: false,
       quantity: 0,
     }
-  ];
+  ];*/
 
   constructor(private http: HttpClient) { }
 
-  public getAll(){
-    return this.beers;
+  public getAll(): Observable<Beer[]>{
+    return this.http.get<Beer[]>(URL + '/Beer').pipe(
+      tap((beers: Beer[]) => beers.forEach(beer => beer.quantity = 0))
+    );
+    //return this.beers;
   }
 }
