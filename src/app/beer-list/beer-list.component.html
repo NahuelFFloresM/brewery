@@ -2,7 +2,7 @@
 <div *ngFor="let beer of beers" [ngClass]="{'clearance': beer.clearance}" class="border border-secondary mb-3">
   <div class="row p-2">
     <div class="col-md-2 text-v-align-m">
-      <img width="100" class="img-thumbnail" [src]="beer.image" [alt]="beer.name">
+      <img width="100" class="img-thumbnail" [src]="beer.image" [alt]="beer.name" (click)=open(beer)>
     </div>
     <div class="col-md-2 text-v-align-m">
       {{beer.name}}
@@ -25,3 +25,7 @@
     </div>
   </div>
 </div>
+<div *ngIf="beers.length === 0" class="p-2 mt-5">
+  <h3>Actualmente no Dispones de productos.</h3>
+</div>
+<app-beer-info-modal #myModal></app-beer-info-modal>
