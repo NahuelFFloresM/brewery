@@ -14,10 +14,13 @@ export class BeerListComponent implements OnInit {
 
 
   constructor(private cart: BeerCartService, private beerService: BeerDataService) {
-    this.beers = beerService.getAll();
+
    }
 
   ngOnInit(): void {
+    this.beerService.getAll().subscribe( new_beers => {
+      this.beers = new_beers;
+    });
   }
 
   // tslint:disable-next-line:typedef
