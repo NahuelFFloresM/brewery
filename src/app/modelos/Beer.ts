@@ -6,4 +6,5 @@ export interface Beer{
   image: string;
   clearance: boolean;
   quantity: number;
+  history: string;
 }
