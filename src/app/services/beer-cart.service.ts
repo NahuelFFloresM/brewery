@@ -12,7 +12,7 @@ export class BeerCartService {
   private _cartList: Beer[] = [];
   cartList: BehaviorSubject<Beer[]> = new BehaviorSubject([]);
 
-  addToCart(beer: Beer) {
+  addToCart(beer: Beer): void {
     let item: Beer = this._cartList.find((v1) => v1.name === beer.name);
     if (!item){
       this._cartList.push({... beer});
