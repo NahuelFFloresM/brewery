@@ -12,6 +12,7 @@ import { BreweryBeersComponent } from './brewery-beers/brewery-beers.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 import { HomeComponent } from './home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BeerInfoModalComponent } from './beer-info-modal/beer-info-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CartComponent,
     BreweryBeersComponent,
     InputIntegerComponent,
-    HomeComponent
+    HomeComponent,
+    BeerInfoModalComponent
   ],
   imports: [
     BrowserModule,
