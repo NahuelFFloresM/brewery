@@ -1,31 +1,4 @@
-<!--<table class="table">
-  <thead>
-    <tr>
-      <th>Imagen</th>
-      <th>Nombre</th>
-      <th>Tipo</th>
-      <th>Precio</th>
-      <th>Stock</th>
-      <th>Compra</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let beer of beers" [ngClass]="{'clearance': beer.clearance}">
-      <td><img width="100" class="img-thumbnail" [src]="beer.image" [alt]="beer.name"></td>
-      <td>{{beer.name}}</td>
-      <td>{{beer.type}}</td>
-      <td>{{beer.price |currency}}</td>
-      <td>
-        <span class="badge badge-warning" *ngIf="beer.stock==0; else elseBlock">Sin Stock</span>
-        <ng-template #elseBlock>{{beer.stock}}</ng-template>
-      </td>
-      <td>
-        <app-input-integer *ngIf="beer.stock" [(quantity)]="beer.quantity" [max]="beer.stock" (maxReached)="maxReached($event)"></app-input-integer>
-        <button class="btn btn-primary mt-2" (click)="addToCart(beer)">Al Carrito</button>
-      </td>
-    </tr>
-  </tbody>
-</table>-->
+<h2>Nuestros Productos</h2>
 <div *ngFor="let beer of beers" [ngClass]="{'clearance': beer.clearance}" class="border border-secondary mb-3">
   <div class="row p-2">
     <div class="col-md-2 text-v-align-m">
@@ -41,7 +14,7 @@
       {{beer.price |currency}}
     </div>
     <div class="col-md-2 text-v-align-m">
-      <span class="badge badge-warning" *ngIf="beer.stock==0; else elseBlock">Sin Stock</span>
+      <span class="badge badge-warning p-1" *ngIf="beer.stock==0; else elseBlock">Sin Stock</span>
       <ng-template #elseBlock>{{beer.stock}}</ng-template>
     </div>
     <div class="col-md-2 text-v-align-m">
