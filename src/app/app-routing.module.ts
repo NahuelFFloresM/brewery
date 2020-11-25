@@ -5,10 +5,10 @@ import { BreweryAboutComponent } from './brewery-about/brewery-about.component';
 import { BreweryBeersComponent } from './brewery-beers/brewery-beers.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'beers', component: BreweryBeersComponent },
   { path: 'about', component: BreweryAboutComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
