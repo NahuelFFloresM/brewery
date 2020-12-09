@@ -29,6 +29,7 @@
     "common-js": "^0.3.8",
     "core-js": "^3.6.4",
     "enhanced-resolve": "^5.4.0",
+    "eslint-plugin-import": "^2.22.1",
     "express": "^4.17.1",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",

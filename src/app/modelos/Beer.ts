@@ -1,4 +1,4 @@
-export interface Beer{
+export interface Beer {
   name: string;
   type: string;
   price: number;
