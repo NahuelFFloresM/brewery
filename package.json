@@ -28,7 +28,7 @@
     "@angular/router": "~10.1.6",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
     "bootstrap": "^4.5.0",
-    "core-js": "^3.8.1",
+    "core-js": "^3.6.4",
     "express": "^4.17.1",
     "path": "^0.12.7",
     "rxjs": "~6.6.0",
