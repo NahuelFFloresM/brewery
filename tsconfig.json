@@ -3,7 +3,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "types": ["node"],
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -17,7 +16,5 @@
       "es2018",
       "dom"
     ]
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "**/*.spec.ts"]
+  }
 }
