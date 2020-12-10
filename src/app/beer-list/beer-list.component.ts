@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BeerCartService } from '../services/beer-cart.service';
 import { BeerInfoModalComponent } from '../beer-info-modal/beer-info-modal.component';
-import { Beer } from '../modelos/Beer';
+import { Beer } from '../modelos/beer';
 import { BeerDataService } from '../services/beer-data.service';
 import { Subscription } from 'rxjs';
 
