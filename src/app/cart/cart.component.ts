@@ -10,11 +10,11 @@ import { Beer } from '../modelos/beer';
 })
 export class CartComponent implements OnInit {
 
-  //cartList: Beer[] = [];
+  // cartList: Beer[] = [];
   cartList$: Observable<Beer[]>;
 
   constructor(private cartService: BeerCartService) {
-    //cartService.cartList.subscribe((c => this.cartList = c));
+    // cartService.cartList.subscribe((c => this.cartList = c));
     this.cartList$ = cartService.cartList.asObservable();
   }
 

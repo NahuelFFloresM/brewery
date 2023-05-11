@@ -1,13 +1,28 @@
-<ngb-carousel *ngIf="images" class="mt-5 mb-5" #carousel [interval]="2000" >
-  <ng-template ngbSlide *ngFor="let image of images">
-    <div class="picsum-img-wrapper">
-      <a class="nav-link" [routerLink]="['/beers']">
-        <img [src]="image" alt="Random slide">
-      </a>
+<div class="row">
+  <div class="col-md-12">
+    <ngb-carousel *ngIf="images" class="mt-5 mb-5" #carousel [interval]="2000" id="ngb-carousel">
+      <ng-template ngbSlide *ngFor="let image of images">
+        <div class="picsum-img-wrapper">
+          <a class="nav-link" [routerLink]="['/beers']">
+            <img [src]="image" alt="Random slide">
+          </a>
+        </div>
+        <div class="carousel-caption">
+          <h3>Slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <img src="https://i.picsum.photos/id/550/200/300.jpg?hmac=XYJd_N4d9B5UYc7zHt9tTuzuQ4ol2byXjSGvqPAsRkI" alt="Random image">
+  </div>
+  <div class="col-md-6 d-flex flex-row align-items-center">
+    <div>
+      <h2>What is Lorem Ipsum?</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
-    <div class="carousel-caption">
-      <h3>Slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <a class="navbar-brand nav-link border border-secondary" [routerLink]="['/']">{{title}}</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+    <ul class="navbar-nav ">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/beers']" [routerLinkActive]="['active']">Beer List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about']" [routerLinkActive]="['active']">Contact</a>
+      </li>
+      <!-- <li class="nav-item" *ngIf="isLogged;then thenBlock else elseBlock">
+      </li>
+      <ng-template #thenBlock><a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a></ng-template>
+      <ng-template #elseBlock><a class="nav-link" href="#" (click)="onLogout()">Logout</a></ng-template> -->
+      <li class="nav-item" *ngIf="isLogged">
+        <a class="nav-link" href="#" (click)="onLogout()">Logout</a>
+      </li>
+      <li class="nav-item" *ngIf="!isLogged">
+        <a class="nav-link" [routerLink]="['/login']" [routerLinkActive]="['active']">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>

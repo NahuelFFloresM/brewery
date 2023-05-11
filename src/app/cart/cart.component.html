@@ -1,6 +1,8 @@
 <h3>Carrito de compras</h3>
-<ul>
-  <li *ngFor="let beer of cartList$ | async">
-    {{beer.name}}: {{beer.quantity}}
+<ul class="list-group">
+  <div class="text-center" *ngIf="cartList$ == null" >Vacio</div>
+  <li *ngFor="let beer of cartList$ | async" class="list-group-item beer-item">
+    <app-beer-cart-items [beer]=beer></app-beer-cart-items>
   </li>
 </ul>
+

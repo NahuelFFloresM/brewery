@@ -20,7 +20,7 @@ export class BeerInfoModalComponent implements OnInit {
 
   open(beer): void {
     this.beer = beer;
-    this.activeModal.open(this.content,{size: 'lg'});
+    this.activeModal.open(this.content, {size: 'lg'});
 }
 
 }

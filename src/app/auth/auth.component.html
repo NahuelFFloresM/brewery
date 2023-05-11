@@ -1,0 +1,51 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <!-- <div class="alert alert-danger" *ngIf="error">
+      <p>{{ error }}</p>
+    </div> -->
+    <app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>
+    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="form-control"
+          ngModel
+          required
+          email
+          />
+      </div>
+      <div class="form-group" *ngIf="onRegister">
+        <label for="password">Adresss</label>
+        <input
+          type="text"
+          name="adress"
+          id="adress"
+          class="form-control"
+          ngModel
+          required
+          password
+          />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          ngModel
+          required
+          minlength="6"
+          password
+          />
+      </div>
+      <div class="form-group ">
+        <button class="btn btn-primary" type="submit" [disabled]="!authForm.valid">{{ onRegister ? "Sign Up": "Login"}}</button>
+        <button class="btn btn-secondary ml-2" (click)="showRegister()">{{ onRegister ? "Login" : "Register"}}</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -49,6 +49,10 @@ export class BeerDataService {
     return this.http.get<Beer[]>(URL + '/Beer').pipe(
       tap((beers: Beer[]) => beers.forEach(beer => beer.quantity = 0))
     );
-    //return this.beers;
+    // return this.beers;
+  }
+
+  public replenishItem(beer){
+
   }
 }
